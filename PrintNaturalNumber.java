@@ -12,4 +12,3 @@ public class PrintNaturalNumber {
         printNaturalNumber(10);
     }
 }
-g
