@@ -1,3 +1,11 @@
- // for (int i = 0; i < size; i++) {
-        // System.out.println(numbers[i] + "");
-        // }
+ pivot) {
+                i++;
+            }
+
+            while (i <= j && arr[i] > pivot) {
+                j--;
+            }
+            if (i < j) {
+                swap(arr, i, j);
+            }
+        }
