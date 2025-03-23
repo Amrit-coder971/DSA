@@ -1,5 +1,5 @@
 class Queue {
-    // Points to the front of the queue
+    // Points to the (front= start)of the queue
     int front;
     // Points to the next available position in the queue
     int rear;
