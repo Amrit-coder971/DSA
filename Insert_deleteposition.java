@@ -29,30 +29,40 @@ class LinkedList {
         head = newNode;
     }
 
-    // Method to print the linked list
-    public void print() {
-
+    void deletespcificNode(int position) {
         if (head == null) {
-            // If list is empty, print message
-            System.out.println("No element in the Linked List");
+            System.out.println("list is empty");
             return;
         }
-        // Start from the head
         Node temp = head;
-        // Traverse the list
-        while (temp != null) {
-            // Print each node
-            System.out.println(temp.data + "-->");
-            // Move to the next node
+        if (position == 0) {
+            head = temp.next;
+            return;
+        }
+        for (int i = 0; temp != null && i < position - 1; i++) {
             temp = temp.next;
         }
-        // End of the list
-        // System.out.println("null");
+        if (temp == null || temp.next == null) {
+            System.out.println("position doesnot exit");
+            return;
+        }
+        temp.next = temp.next.next;
+
+    }
+
+    // Method to print the linked list
+    public void print() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + "-->");
+            temp = temp.next;
+        }
+        System.out.println();
     }
 }
 
 // Main class to test the LinkedList
-public class InsertAtFirst_Ll {
+public class Insert_deleteposition {
     public static void main(String[] args) {
         // Create a linked list or object
         LinkedList list = new LinkedList();
@@ -63,6 +73,8 @@ public class InsertAtFirst_Ll {
         // Print the linked list
 
         System.out.println("Print after insert at first:");
+        list.print();
+        list.deletespcificNode(1);
         list.print();
 
     }

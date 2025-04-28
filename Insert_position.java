@@ -29,30 +29,34 @@ class LinkedList {
         head = newNode;
     }
 
-    // Method to print the linked list
-    public void print() {
-
-        if (head == null) {
-            // If list is empty, print message
-            System.out.println("No element in the Linked List");
+    void intertAfterNode(int position, int data) {
+        Node newNode = new Node(data);
+        Node current = head;
+        for (int i = 0; current != null && i < position; i++) {
+            current = current.next;
+        }
+        if (current == null) {
+            System.out.println("position is out of bouds");
             return;
         }
-        // Start from the head
+        newNode.next = current.next;
+        current.next = newNode;
+
+    }
+
+    // Method to print the linked list
+    public void print() {
         Node temp = head;
-        // Traverse the list
         while (temp != null) {
-            // Print each node
-            System.out.println(temp.data + "-->");
-            // Move to the next node
+            System.out.print(temp.data + "-->");
             temp = temp.next;
         }
-        // End of the list
-        // System.out.println("null");
+        System.out.println();
     }
 }
 
 // Main class to test the LinkedList
-public class InsertAtFirst_Ll {
+public class Insert_position {
     public static void main(String[] args) {
         // Create a linked list or object
         LinkedList list = new LinkedList();
@@ -63,6 +67,8 @@ public class InsertAtFirst_Ll {
         // Print the linked list
 
         System.out.println("Print after insert at first:");
+        list.print();
+        list.intertAfterNode(0, 1);
         list.print();
 
     }

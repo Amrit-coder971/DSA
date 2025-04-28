@@ -53,6 +53,7 @@ class Queue {
 
         // Remove first element
         int removeData1 = a.deQueue();
-        System.out.println("remover" + removeData1);
+        System.out.println("remover:" + removeData1);
+        
     }
 }

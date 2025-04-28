@@ -24,46 +24,46 @@ class LinkedList {
         head = newNode;
     }
 
-    void deleteAtlast() {
+    public void DeleteAtfirst(int data) {
         if (head == null) {
-            System.out.println("List is empty");
+            System.out.println("the list is empty");
             return;
         }
-
-        if (head.next == null) {
-            head = null;
-        } else {
-            Node secondLast = head;
-            while (secondLast.next.next != null) {
-                secondLast = secondLast.next;
-            }
-            secondLast.next = null;
-        }
+        head = head.next;
     }
 
+    // public void print() {
+
+    // if (head == null) {
+    // System.out.println("No element in the Linked List");
+    // return;
+    // }
+
+    // Node temp = head;
+
+    // while (temp != null) {
+    // System.out.print(temp.data);
+    // if (temp.next != null) {
+    // System.out.print(" --> ");
+    // }
+
+    // temp = temp.next;
+    // }
+    // System.out.println();
+    // }
+
+    // new print form
     public void print() {
-
-        if (head == null) {
-            System.out.println("No element in the Linked List");
-            return;
-        }
-
         Node temp = head;
-
         while (temp != null) {
-            System.out.print(temp.data);
-            if (temp.next != null) {
-                System.out.print(" --> ");
-            }
-
+            System.out.println(temp.data + "-->");
             temp = temp.next;
         }
         System.out.println();
     }
-
 }
 
-public class DeleteAtLast {
+public class DeleteATfirst {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.insertAtfirst(1);
@@ -73,7 +73,7 @@ public class DeleteAtLast {
         list.insertAtfirst(5);
         list.print();
 
-        list.deleteAtlast();
+        list.DeleteAtfirst(3);
         list.print();
 
     }
