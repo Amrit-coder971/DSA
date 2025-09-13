@@ -10,7 +10,7 @@ class CircularQueue {
         this.queue = new int[queueSize];
         this.front = -1;
         this.rear = -1;
-        this.size = queueSize;
+        this.size = queueSize;  
     }
 
     // Check if the queue is full (i.e., if rear is just before the front)

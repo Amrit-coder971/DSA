@@ -4,7 +4,7 @@ class Queue {
     // Points to the next available position in the queue
     int rear;
     // Array to store queue elements
-    int queue[];
+    int queue[]; 
 
     // Constructor to initialize the queue with a given size
     Queue(int queueSize) {

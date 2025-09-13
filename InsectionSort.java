@@ -3,9 +3,8 @@ public class InsectionSort {
         int[] numbers = { 5, 6, 30, 21, 35, 55, 60, 45, 55 };
         int size = numbers.length;
         System.out.println("number before sorting \n");
-        for (int i = 0; i < size; i++) {
-            System.out.println(numbers[i] + "");
-        }
+
+        
         for (int i = 1; i < size; i++) {
             int key = numbers[i];
             int j = i - 1;
